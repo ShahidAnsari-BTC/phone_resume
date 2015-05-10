@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" class="platform-ios platform-cordova platform-webview">
+
+    <ion-pane>
+    <!-- The nav bar that will be updated as we navigate -->
+  <ion-nav-bar class="bar-positive bar-assertive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i>:
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  
+  <ion-nav-view></ion-nav-view>
+  
+  <script id="list.html" type="text/ng-template">
+    <ion-view view-title="Welcome">  
+      <ion-content class="padding">
+        <div class="list">
+          <a class="item item-thumbnail-left" href="#">
+            <img src="img/profile.jpg">
+            <h2>Mohd Shahid Ansari</h2>
+            <p>Software Developer</p>
+            <p style="font-size:8px">http://shahid-resume.herokuapp.com</p>
+          </a>
+        </div>
+        
+        <button class="button button-outline button-positive" style="width:100%" ng-click="changeProfile()">
+          Profile
+        </button>
+        <br><br>
+        <button class="button button-outline button-assertive" style="width:100%" ng-click="changePage()">
+          Resume
+        </button>
+        <br><br>
+        <button class="button button-outline button-energized" style="width:100%" ng-click="changeProtfolio()">
+          Portfolio
+        </button>
+        <br><br>
+        <button class="button button-outline button-balanced" style="width:100%" ng-click="changeContact()">
+          Contact
+        </button>
+        
+      </ion-content>
+    </ion-view>
+  </script>  
+  
+  <script id="profile.html" type="text/ng-template">
+    <ion-view view-title="Profile">
+    <ion-content class="padding">
+     
+      <div class="list card">
+        <div class="item item-avatar">
+          <img src="img/shahid.jpg">
+          <h2>Shahid</h2>
+        <p>06, 1988</p>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          I am a hard working, honest individual. I am a good timekeeper, always willing to learn new skills. I am friendly, helpful and polite, have a good sense of humour. I am able to work independently in busy environments and also within a team setting. I am outgoing and tactful, and able to listen effectively when solving problems.
+        </p>
+        <p>
+          An enthusiastic and professional Web Developer and Designer, who enjoys being part of,as well as leading, a successful and productive team. Quick to grasp new ideas and concepts, and to develop innovative and creative solutions to problems. Able to work well on own initiative and can demonstrate the high levels of motivation required to meet the tightest of deadlines. Even under significant pressure, possesses a strong ability to perform effectively.
+        </p>
+        <p>
+          <a href="#" class="subdued">70 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+      <a class="item item-icon-left assertive" href="#" ng-click="goBack()">
+    <i class="ion-arrow-left-b"></i>
+    Home
+  </a>
+    </div>
+    </ion-view>
+  </script> 
+  
+  <script id="view.html" type="text/ng-template">
+    <ion-view view-title="Resume">
+    <ion-content class="padding">
+      <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/botree.png">
+    <h2>BoTree Technologies</h2>
+    <h3>ROR Developer</h3>
+    <p>February 2015 – Present Ahmedabad Area, India</p>
+  </div>
+  <div class="item item-avatar">
+    <img src="img/spuj.png">
+    <h2>Spuj Ads</h2>
+    <h3>Contract Software Developer</h3>
+    <p>December 2014 – February 2015 (3 months)New Delhi Area, India</p>
+  </div>
+  <div class="item item-avatar">
+    <img src="img/shaeringdais.jpg">
+    <h2>SharingDais</h2>
+    <h3>Contract Software Developer</h3>
+    <p>September 2014 – December 2014 (4 months)Ghaziabad, Uttar Pradesh</p>
+  </div>
+  <div class="item item-avatar">
+    <img src="img/ds4u.png">
+    <h2>DreamSoft4u Pvt. Ltd</h2>
+    <h3>Contract Software Developer</h3>
+    <p>July 2014 – September 2014 (3 months)Jaipur, Rajasthan</p>
+  </div>
+   <div class="item item-avatar">
+    <img src="img/kspl.png">
+    <h2>Kartik Solutions Pvt. Ltd</h2>
+    <h3>Software Analyst</h3>
+    <p>June 2013 – June 2014 (1 year 1 month)Noida, Uttar Pradesh</p>
+  </div>
+  <div class="item item-avatar">
+    <img src="img/brlsys.png">
+    <h2>Beryl systems</h2>
+    <h3>Software Developer</h3>
+    <p>December 2012 – May 2013 (6 months)Faridabad, Haryana</p>
+  </div>
+
+ <a class="item item-icon-left assertive" href="#" ng-click="goBack()">
+    <i class="ion-arrow-left-b"></i>
+    Home
+  </a>
+
+</div>
+    </ion-view>
+  </script> 
+  
+  <script id="protfolio.html" type="text/ng-template">
+    <ion-view view-title="Portfolio">
+    <ion-content class="padding">
+      <div class="list card">
+  <div class="item item-avatar">
+    <img src="img/botree.png">
+    <h2>BoTree Technologies</h2>
+    <p>https://www.advowire.com</p>
+  </div>
+  <div class="item item-image">
+    <img src="img/adv0.png">
+  </div>
+  <br></br>
+  <div class="item item-avatar">
+    <img src="img/shaeringdais.jpg">
+    <h2>SharingDais</h2>
+   <p>www.sharingdais.com</p>
+  </div>
+  <div class="item item-image">
+    <img src="img/1.png">
+  </div>
+  <br></br>
+  <div class="item item-avatar">
+    <img src="img/ds4u.png">
+    <h2>DreamSoft4u Pvt. Ltd</h2>
+    <p>www.tmo.sg</p>
+  </div>
+  <div class="item item-image">
+    <img src="img/2.png">
+  </div>
+  <br><br>
+  <div class="item item-avatar">
+    <img src="img/kspl.png">
+    <h2>Kartik Solutions Pvt. Ltd</h2>
+    <p>www.sharemeister.com</p>
+  </div>
+   <div class="item item-image">
+    <img src="img/3.png">
+  </div>
+   <a class="item item-icon-left assertive" href="#" ng-click="goBack()">
+    <i class="ion-arrow-left-b"></i>
+    Home
+  </a>
+</div>
+    </ion-view>
+  </script> 
+  
+  <script id="contact.html" type="text/ng-template">
+    <ion-view view-title="Send Feedback">
+      <ion-content class="padding">
+      
+           <div class="list">
+  <label class="item item-input">
+  <span class="input-label">Name</span>
+    <input type="text" placeholder="Name">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="email" placeholder="john@suhr.com">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Message</span>
+    <textarea placeholder="message"></textarea>
+  </label>
+   <label class="item item-input">
+      <button class="button button-block button-calm">Send</button>
+  </label>
+</div>
+
+      </ion-content>
+    </ion-view>
+  </script> 
+  
+    <div class="bar bar-footer bar-assertive">
+      <div class="title">@shahid</div>
+    </div>
+    </ion-pane>
+  </body>
+</html>
